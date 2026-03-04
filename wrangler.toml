@@ -4,6 +4,17 @@ main = "src/index.ts"
 compatibility_date = "2024-12-18"
 compatibility_flags = ["nodejs_compat"]
 
+# Disable Workers Routes
+workers_dev = false
+preview_urls = false
+
+# Custom Routes
+# Docs: https://developers.cloudflare.com/workers/configuration/routing/custom-domains/
+# Configuration: https://developers.cloudflare.com/workers/configuration/routing/custom-domains/#set-up-a-custom-domain-in-your-wrangler-configuration-file
+[[routes]]
+pattern = "ddns.coggnition.com"
+custom_domain = true
+
 # Workers Logs
 # Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
 # Configuration: https://developers.cloudflare.com/workers/observability/logs/workers-logs/#enable-workers-logs
