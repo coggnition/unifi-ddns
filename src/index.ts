@@ -138,6 +138,12 @@ async function update(clientOptions: ClientOptions, newRecords: AddressableRecor
 
 export default {
 	async fetch(request): Promise<Response> {
+		// Validate path
+	    const url = new URL(request.url);
+	    if (url.pathname !== '/update') {
+	      return new Response('Not Found', { status: 404 });
+	    }
+		
 		console.log('Requester IP: ' + request.headers.get('CF-Connecting-IP'));
 		console.log(request.method + ': ' + request.url);
 		console.log('Body: ' + (await request.text()));

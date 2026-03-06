@@ -12,7 +12,7 @@ preview_urls = false
 # Docs: https://developers.cloudflare.com/workers/configuration/routing/custom-domains/
 # Configuration: https://developers.cloudflare.com/workers/configuration/routing/custom-domains/#set-up-a-custom-domain-in-your-wrangler-configuration-file
 [[routes]]
-pattern = "ddns.coggnition.com"
+pattern = "ddns.coggnition.com/update"
 custom_domain = true
 
 # Workers Logs
